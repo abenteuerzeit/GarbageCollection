@@ -2,7 +2,7 @@
 
 namespace GarbageCollection
 {
-    internal class Calculator
+    internal class Calculator : IDisposable
     {
         public Calculator()
         {
@@ -12,6 +12,12 @@ namespace GarbageCollection
         ~Calculator()
         {
             Console.WriteLine("Calculator being finalized");
+            this.Dispose();
+        }
+
+        public void Dispose()
+        {
+            Console.WriteLine("Calculator being disposed");
         }
 
         public int Divide(int first, int second)

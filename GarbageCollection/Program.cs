@@ -6,9 +6,10 @@ namespace GarbageCollection
     {
         static void doWork()
         {
-            var calculator = new Calculator();
-            Console.WriteLine($"120 / 15 = {calculator.Divide(120, 15)}");
-            calculator = null;
+            using (Calculator calculator = new Calculator())
+            {
+                Console.WriteLine($"120 / 15 = {calculator.Divide(120, 15)}");
+            }
             Console.WriteLine("Program finishing");
         }
 
@@ -22,8 +23,8 @@ namespace GarbageCollection
             {
                 Console.WriteLine(ex.Message);
             }
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
+            //GC.Collect();
+            //GC.WaitForPendingFinalizers();
         }
     }
 }
