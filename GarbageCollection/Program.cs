@@ -23,8 +23,8 @@ namespace GarbageCollection
             {
                 Console.WriteLine(ex.Message);
             }
-            //GC.Collect();
-            //GC.WaitForPendingFinalizers();
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
     }
 }

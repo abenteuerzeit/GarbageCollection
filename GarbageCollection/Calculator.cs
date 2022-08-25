@@ -4,6 +4,7 @@ namespace GarbageCollection
 {
     internal class Calculator : IDisposable
     {
+        private bool disposed = false;
         public Calculator()
         {
             Console.WriteLine("Calculator being created");
@@ -17,7 +18,12 @@ namespace GarbageCollection
 
         public void Dispose()
         {
-            Console.WriteLine("Calculator being disposed");
+            if (!this.disposed)
+            {
+                Console.WriteLine("Calculator being disposed");
+            }
+            this.disposed = true;
+            GC.SuppressFinalize(this);
         }
 
         public int Divide(int first, int second)
