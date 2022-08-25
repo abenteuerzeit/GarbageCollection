@@ -6,7 +6,10 @@ namespace GarbageCollection
     {
         static void doWork()
         {
-            // TODO: Test garbage collection
+            var calculator = new Calculator();
+            Console.WriteLine($"120 / 15 = {calculator.Divide(120, 15)}");
+            calculator = null;
+            Console.WriteLine("Program finishing");
         }
 
         static void Main(string[] args)
@@ -19,6 +22,8 @@ namespace GarbageCollection
             {
                 Console.WriteLine(ex.Message);
             }
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
     }
 }
