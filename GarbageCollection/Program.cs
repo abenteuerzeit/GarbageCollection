@@ -8,7 +8,7 @@ namespace GarbageCollection
         {
             using (Calculator calculator = new Calculator())
             {
-                Console.WriteLine($"120 / 15 = {calculator.Divide(120, 15)}");
+                Console.WriteLine($"120 / 0 = {calculator.Divide(120, 0)}");
             }
             Console.WriteLine("Program finishing");
         }
@@ -19,10 +19,15 @@ namespace GarbageCollection
             {
                 doWork();
             }
-            catch (Exception ex)
+            catch (InvalidOperationException ex)
             {
                 Console.WriteLine(ex.Message);
             }
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
             GC.Collect();
             GC.WaitForPendingFinalizers();
         }
