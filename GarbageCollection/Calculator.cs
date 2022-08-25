@@ -18,12 +18,15 @@ namespace GarbageCollection
 
         public void Dispose()
         {
-            if (!this.disposed)
+            lock (this)
             {
-                Console.WriteLine("Calculator being disposed");
+                if (!this.disposed)
+                {
+                    Console.WriteLine("Calculator being disposed");
+                }
+                this.disposed = true;
+                GC.SuppressFinalize(this);
             }
-            this.disposed = true;
-            GC.SuppressFinalize(this);
         }
 
         public int Divide(int first, int second)
