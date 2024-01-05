@@ -1,7 +1,8 @@
 repo_name: abenteuerzeit/GarbageCollection
 report_id: 04bf0c1e5c925c423f65ca9eda2c0fde
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-12T10:24:59+00:00'
+timestamp: '2024-01-05T08:49:13+00:00'
 requested_by: abenteuerzeit
 provider: github
 branch: master
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1015/1200px-C_Sharp_wordmark.svg.png
+  detection_source_url: https://github.com/abenteuerzeit/GarbageCollection
   detection_source: Repo Metadata
 - name: ".NET Core"
   description: An Open Source, General-Purpose Development Platform Maintained by
@@ -28,7 +30,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/6403/default_91fc1f0ee315262794273aa1387eaf8fed8436e6.png
-  detection_source_url: GarbageCollection/GarbageCollection.csproj
+  detection_source_url: https://github.com/abenteuerzeit/GarbageCollection/blob/master/GarbageCollection/GarbageCollection.csproj
   detection_source: GarbageCollection/GarbageCollection.csproj
   last_updated_by: abenteuerzeit
   last_updated_on: 2022-08-25 17:09:32.000000000 Z
@@ -43,7 +45,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/11331/asp.net-core.png
-  detection_source_url: GarbageCollection/GarbageCollection.csproj
+  detection_source_url: https://github.com/abenteuerzeit/GarbageCollection/blob/master/GarbageCollection/GarbageCollection.csproj
   detection_source: GarbageCollection/GarbageCollection.csproj
   last_updated_by: abenteuerzeit
   last_updated_on: 2022-08-25 17:09:32.000000000 Z
@@ -55,6 +57,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/abenteuerzeit/GarbageCollection
   detection_source: Repo Metadata
 - name: Visual Studio
   description: State-of-the-art tools and services that you can use to create great
@@ -65,6 +68,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Integrated Development Environment
   image_url: https://img.stackshare.io/service/1451/SR2hUhQN.png
+  detection_source_url: https://github.com/abenteuerzeit/GarbageCollection/blob/master/GarbageCollection.sln
   detection_source: GarbageCollection.sln
   last_updated_by: abenteuerzeit
   last_updated_on: 2022-08-25 17:09:32.000000000 Z
